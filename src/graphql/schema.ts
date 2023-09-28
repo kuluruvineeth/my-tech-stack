@@ -5,6 +5,7 @@ type Novel{
     title: String
     image: String
     createdAt: String
+    updatedAt: String
     authors: [Author]
 }
 
@@ -20,7 +21,7 @@ type Query{
 }
 
 type Mutation{
-    addNovel(title: String): Novel
+    addNovel(title: String,image: String): Novel
     updateNovel(id: ID!, title: String): Novel
     deleteNovel(id: ID!): Novel
     addAuthor(novelId: ID!, name: String): Author
